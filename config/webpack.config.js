@@ -83,7 +83,7 @@ module.exports = function(webpackEnv) {
       {
         // Options for PostCSS as we reference these options twice
         // Adds vendor prefixing based on your specified browser support in
-        // package.json
+        // headerList.json
         loader: require.resolve('postcss-loader'),
         options: {
           // Necessary for external CSS imports to work
@@ -98,7 +98,7 @@ module.exports = function(webpackEnv) {
               stage: 3,
             }),
             // Adds PostCSS Normalize as the reset css with default options,
-            // so that it honors browserslist config in package.json
+            // so that it honors browserslist config in headerList.json
             // which in turn let's users customize the target behavior as per their needs.
             postcssNormalize(),
           ],
@@ -510,7 +510,7 @@ module.exports = function(webpackEnv) {
       // The public URL is available as %PUBLIC_URL% in index.html, e.g.:
       // <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
       // In production, it will be an empty string unless you specify "homepage"
-      // in `package.json`, in which case it will be the pathname of that URL.
+      // in `headerList.json`, in which case it will be the pathname of that URL.
       // In development, this will be an empty string.
       new InterpolateHtmlPlugin(HtmlWebpackPlugin, env.raw),
       // This gives some necessary context to module not found errors, such as

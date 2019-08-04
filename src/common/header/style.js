@@ -62,6 +62,44 @@ background:#969696;
 }
 `;
 
+export const SearchHot = styled.div`
+position:absolute;
+left:0;
+top:56px;
+width:240px;
+padding:0 20px;
+// background:yellow;
+box-shadow:0 0 8px rgba(0,0,0,.2);
+`;
+export const SearchHotTitle = styled.div`
+margin-top:20px;
+color:#969696;
+margin-bottom:15px;
+line-height:20px;
+font-size:14px;
+`;
+
+export const SearchHotSwitch = styled.span`
+float:right;
+font-size:13px;
+`;
+export const SearchHotItem = styled.a`
+display:block;
+float:left;
+font-size:12px;
+padding:0 5px;
+line-height:20px;
+border:1px solid #ddd;
+color:#787878;
+cursor:pointer;
+border-radius:3px;
+margin-right:10px;
+margin-bottom:10px;
+`;
+export const SearchHotList = styled.div`
+overflow:hidden;
+`;
+
 export const NavSearch = styled.input.attrs({
     placeholder: '搜索'
 })`
