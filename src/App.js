@@ -5,7 +5,6 @@ import Header from './common/header';
 import {Globalstyle} from './style';
 import {GlobalIconFont} from './static/iconfont/iconfont';
 import store from './store/index';
-
 import Home from './pages/home';
 import Details from './pages/details';
 
