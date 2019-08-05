@@ -20,13 +20,14 @@ export const HomeLeft = styled.div`
 `;
 export const HomeRight = styled.div`
       float:right;
-      width:240px;
+      width:280px;
 `
 
 export const TopicWrapper = styled.div`
       padding:20px 0 10px 0;
       overflow:hidden;
       margin-left:-10px;
+      border-bottom:1px solid #dcdcdc;
 `
 // 内层的元素是浮动的，外层需要加一个overflow:hidden,
 // 触发它的BFC，让它的高度能够自动适应内部的高度
@@ -50,4 +51,48 @@ export const TopicItem = styled.div`
          height:32px;
          margin-right:10px;
       }
+`;
+export const ListItem = styled.div`
+padding:20px 0;
+overflow:hidden;
+border-bottom:1px solid #dcdcdc
+.list-pic{
+display:block;
+width:125px;
+height:100px;
+float:right;
+border-radius:10px;
+}
+`;
+export const ListInfo = styled.div`
+width:500px;
+float:left;
+.title{
+line-height:27px;
+font-size:18px;
+font-weight:bold;
+color:#333;
+}
+.desc{
+line-height:24px;
+font-size:13px;
+color:#999;
+}
+`;
+
+export const RecommendWrapper = styled.div`
+margin:30px 0;
+width:280px;
+`
+export const RecommendItem = styled.div`
+height:50px;
+background:url(${(props) => props.imgUrl});
+width:280px;
+background-size: contain;
+`;
+export const WriterWrapper = styled.div`
+width:278px;
+border:1px solid #dcdcdc;
+border-radius:3px;
+height:300px;
 `
