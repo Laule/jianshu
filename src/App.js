@@ -7,6 +7,7 @@ import {GlobalIconFont} from './static/iconfont/iconfont';
 import store from './store/index';
 import Home from './pages/home';
 import Details from './pages/details';
+import Login from './pages/login';
 
 class App extends PureComponent {
     render() {
@@ -17,7 +18,8 @@ class App extends PureComponent {
                     <BrowserRouter>
                         <Header/>
                         <Route path='/' exact component={Home}></Route>
-                        <Route path='/details' exact component={Details}></Route>
+                        <Route path='/login' exact component={Login}></Route>
+                        <Route path='/details/:id' exact component={Details}></Route>
                     </BrowserRouter>
                     <Globalstyle/>
                     <GlobalIconFont/>

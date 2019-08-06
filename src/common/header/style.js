@@ -46,6 +46,7 @@ export const NavItem = styled.div`
 export const SearchWrapper = styled.div`
 position:relative;
 float:left;
+z-index:1;
 .zoom{
 position:absolute;
 right:4px;
