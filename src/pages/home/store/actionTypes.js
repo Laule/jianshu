@@ -1,6 +1,4 @@
-export const SEARCH_FOCUS = 'header/search_focus';
-export const SEARCH_BLUR = 'header/search_blur';
-export const CHANGE_LIST = 'header/change_list';
-export const MOUSE_ENTER = 'header/mouseEnter';
-export const MOUSE_LEAVE = 'header/mouseLeave';
-export const CHANGE_PAGE = 'header/changePage';
+export const CHANGE_HOME_DATA = 'home/change_home_data';
+export const ADD_ARTICLE_LIST = 'home/add_article_list';
+export const TOGGLE_SCROLL_SHOW = 'home/toggle_scroll_show';
+
