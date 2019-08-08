@@ -10,6 +10,7 @@ import {
     WriterWrapper,
     WriteSwitch
 } from '../style';
+import {actionCreators} from "../store";
 
 class Writer extends PureComponent {
     getWriterArea() {
@@ -17,21 +18,21 @@ class Writer extends PureComponent {
         // immutable转为array
         const newList = list.toJS();
         const pageList = [];
-        console.log(newList);
         if (newList.length) {
             for (let i = (page - 1) * 5; i < page * 5; i++) {
                 if (typeof newList[i] !== "undefined") {
                     pageList.push(
                         <WriterItem key={newList[i]['id']}>
-                            <a className='avatar'>
+                            <a className='avatar' href='/'>
                                 <img
                                     src={newList[i]['avatar_source']}
                                     alt=''/>
                             </a>
-                            <a className='follow'>
+                            <a className='follow' href='/'>
+                                <i className="iconfont">&#xe608;</i>
                                 关注
                             </a>
-                            <a className='name'>
+                            <a className='name' href='/'>
                                 {newList[i]['nickname']}
                             </a>
                             <p className='work-like'>
@@ -47,12 +48,8 @@ class Writer extends PureComponent {
             <WriterInfo>
                 <WriterTitle>
                     <span>推荐作者</span>
-                    <WriteSwitch
-                        onClick={() => handleChangePage(page, totalPage, this.spinIcon)}
-                    >
-                            <span ref={(icon) => {
-                                this.spinIcon = icon
-                            }} className="iconfont spin">&#xe65a;</span>
+                    <WriteSwitch onClick={() => handleChangePage(page, totalPage, this.spinIcon)}>
+                            <span ref={(icon) => {this.spinIcon = icon}} className="iconfont spin">&#xe65a;</span>
                         换一批
                     </WriteSwitch>
                 </WriterTitle>
@@ -91,8 +88,19 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        handleChangePage(){
-
+        handleChangePage(page, totalPage, spin){
+            let originAngle = spin.style.transform.replace(/[^0-9]/ig, '');
+            if (originAngle) {
+                originAngle = parseInt(originAngle, 10);
+            } else {
+                originAngle = 0;
+            }
+            spin.style.transform = 'rotate(' + (originAngle + 360) + 'deg)';
+            if (page < totalPage) {
+                dispatch(actionCreators.changePage(page + 1));
+            } else {
+                dispatch(actionCreators.changePage(1));
+            }
         }
     }
 }

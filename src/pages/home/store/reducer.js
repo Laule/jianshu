@@ -40,6 +40,8 @@ export default (state = defaultState, action) => {
                 writerList: action.data,
                 totalPage: action.totalPage
             });
+        case actionTypes.CHANGE_PAGE:
+            return state.set('page', action.page);
         default:
             return state;
     }

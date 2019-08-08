@@ -94,7 +94,7 @@ class Header extends Component {
                             <img className="home-nav-diam" src="/images/memu-beta.png" alt=""/>
                         </NavItem>
                         <NavItem className='right'>
-                            <span className="iconfont home-read-type">&#xe636;</span>
+                            <i className="iconfont home-read-type">&#xe636;</i>
                         </NavItem>
 
                         <SearchWrapper>

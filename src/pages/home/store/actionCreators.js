@@ -52,4 +52,9 @@ export const getMoreList = (page) => {
 export const toggleTopShow = (show) => ({
     type: actionTypes.TOGGLE_SCROLL_SHOW,
     show
-})
+});
+
+export const changePage = (page) => ({
+    type: actionTypes.CHANGE_PAGE,
+    page
+});

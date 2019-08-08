@@ -55,7 +55,6 @@ export const TopicItem = styled.div`
 `;
 export const TopicItemMore = styled.a`
       float:left;
-      background:#f7f7f7;
       height:32px;
       line-height:32px;
       margin-left:16px;
@@ -66,34 +65,86 @@ export const TopicItemMore = styled.a`
       margin-bottom:18px;
       cursor: pointer;
 `;
-
+export const ListWrapper = styled.div`
+      margin-top:25px;
+      a{
+        text-decoration: none;
+      }
+`;
 
 export const ListItem = styled.div`
-padding:20px 0;
-overflow:hidden;
-border-bottom:1px solid #dcdcdc
-.list-pic{
-display:block;
-width:125px;
-height:100px;
-float:right;
-border-radius:10px;
-}
+    position: relative;
+    width: 100%;
+    margin: 0 0 15px;
+    padding: 15px 2px 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+    word-wrap: break-word;
+  .list-pic{
+    position: absolute;
+    top: 50%;
+    margin-top: -60px;
+    right: 0;
+    width: 150px;
+    height: 100px;
+    border-radius: 4px;
+    border: 1px solid #f0f0f0;
+    vertical-align: middle;
+   }
 `;
 export const ListInfo = styled.div`
-width:500px;
-float:left;
-.title{
-line-height:27px;
-font-size:18px;
-font-weight:bold;
-color:#333;
-}
-.desc{
-line-height:24px;
-font-size:13px;
-color:#999;
-}
+    padding-right: 165px;
+    .title{
+    color: #333333;
+    margin: -7px 0 4px;
+    display: inherit;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    }
+    .desc{
+    margin: 0 0 8px;
+    font-size: 13px;
+    line-height: 24px;
+    color: #999;
+   }
+   .meta{
+      padding-right: 0!important;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 20px;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 20px;
+      span{
+      margin-right: 10px;
+      color: #b4b4b4;
+      }
+    .jsd-meta{
+      color: #ea6f5a!important;
+      .icon-diamond{
+       font-size:14px;
+       font-size: 18px;
+       vertical-align: -2px;
+      }
+     }
+    .nickname{
+      color: #b4b4b4;
+    }
+    .comments{
+     color: #b4b4b4;
+     .icon-message{
+       font-size: 13px;
+       padding-right: 4px;
+     }
+    }
+    .like{
+    .icon-like{
+    font-size: 15px;
+    padding-right: 4px;
+    vertical-align: -2px;
+    }
+    }
+   }
 `;
 
 export const RecommendWrapper = styled.div`
@@ -199,6 +250,13 @@ export const WriteSwitch = styled.div`
     display: inline-block;
     font-size: 14px;
     color: #969696;
+    .spin{
+       padding-right:4px;
+       display:block;
+       float:left;
+       transition:all .3s ease-in;
+       transform-origin:center center;
+    }
 `;
 
 export const WriterList = styled.ul`
@@ -233,12 +291,15 @@ export const WriterItem = styled.li`
        border-color: #42c02e;
        font-weight: 400;
        line-height: normal;
+       text-decoration: none;
       }
       .name{
         padding-top: 5px;
         margin-right: 60px;
         font-size: 14px;
         display: block;
+        text-decoration: none;
+        color:#333;
       }
       .work-like
       {
@@ -274,13 +335,13 @@ cursor:pointer;
 
 export const BackTop = styled.div`
 position:fixed;
-right:100px;
-bottom:100px;
-background:red; 
+right:40px;
+bottom:40px; 
 font-size:14px;
-width:60px;
-height:60px;
-line-height:60px;
+width:50px;
+height:50px;
+line-height:50px;
 text-align:center;
 border:1px solid #ccc;
+cursor: pointer;
 `;
