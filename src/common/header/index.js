@@ -102,7 +102,7 @@ class Header extends Component {
                 <Addition>
                     <Link to='/write'>
                         <Button className='writting'>
-                            <span className="iconfont">&#xe624;</span>
+                            <i className="iconfont">&#xe624;</i>
                             写文章
                         </Button>
                     </Link>
