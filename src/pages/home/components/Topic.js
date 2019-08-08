@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 import {connect} from 'react-redux';
-import {TopicWrapper, TopicItem} from '../style';
+import {TopicWrapper, TopicItem, TopicItemMore} from '../style';
 
 class Topic extends PureComponent {
     render() {
@@ -18,13 +18,17 @@ class Topic extends PureComponent {
                         )
                     })
                 }
+                <TopicItemMore>
+                    更多热门专题
+                    <i className="iconfont">&#xe735;</i>
+                </TopicItemMore>
             </TopicWrapper>
         )
     }
 }
 
 const mapStateToProps = (state) => ({
-    list: state.getIn(['home','topicList'])
+    list: state.getIn(['home', 'topicList'])
 });
 
 export default connect(mapStateToProps, null)(Topic);

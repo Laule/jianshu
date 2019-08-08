@@ -5,6 +5,7 @@ import List from './components/List';
 import Topic from './components/Topic';
 import Recommend from './components/Recommend';
 import Writer from './components/Writer';
+import Download from './components/Download';
 import {connect} from 'react-redux';
 import {
     HomeWrapper,
@@ -28,6 +29,7 @@ class Home extends PureComponent {
                 </HomeLeft>
                 <HomeRight>
                     <Recommend/>
+                    <Download />
                     <Writer/>
                 </HomeRight>
                 {
@@ -39,6 +41,7 @@ class Home extends PureComponent {
 
     componentDidMount() {
         this.props.changeHomeData();
+        this.props.changeWriterData();
         this.bindEvents();
     }
 
@@ -58,6 +61,9 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
     changeHomeData() {
         dispatch(actionCreators.getHomeInfo());
+    },
+    changeWriterData() {
+        dispatch(actionCreators.getWriterInfo());
     },
     handleScrollTop() {
         window.scrollTo(0, 0);

@@ -30,8 +30,7 @@ export const getList = () => {
     return (dispatch) => {
         axios.get('/api/headerList.json').then((res) => {
             const data = res.data;
-            const action = changeList(data.data);
-            dispatch(action);
+            dispatch(changeList(data.data));
         }).catch(() => {
             console.log('error');
         })

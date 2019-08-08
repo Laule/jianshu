@@ -4,9 +4,12 @@ import {fromJS} from 'immutable';
 const defaultState = fromJS({
     topicList: [],
     articleList: [],
+    writerList: [],
     recommendList: [],
     articlePage: 1,
-    showScroll: false
+    showScroll: false,
+    page: 1,
+    totalPage: 1
 });
 
 const changeHomeData = (state, action) => {
@@ -24,7 +27,6 @@ const addArticleList = (state, action) => {
     });
 }
 
-
 export default (state = defaultState, action) => {
     switch (action.type) {
         case actionTypes.CHANGE_HOME_DATA:
@@ -33,6 +35,11 @@ export default (state = defaultState, action) => {
             return addArticleList(state, action);
         case actionTypes.TOGGLE_SCROLL_SHOW:
             return state.set('showScroll', action.show);
+        case actionTypes.CHANGE_WRITER_LIST:
+            return state.merge({
+                writerList: action.data,
+                totalPage: action.totalPage
+            });
         default:
             return state;
     }

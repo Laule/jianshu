@@ -2,13 +2,23 @@ import styled from 'styled-components';
 import logoPic from '../../static/logo.png';
 
 export const HeaderWrapper = styled.div`
-      position:relative;
-      height:58px;
-      border-bottom:1px solid #f0f0f0;
+      height:56px;
+      border-bottom:1px solid #e7e7e7;
+      position: fixed;
+      right: 0;
+      left: 0;
+      z-index: 1030;
+      background:#ffffff;
 `;
-// .attrs({
-//     href: '/'
-// })
+export const HeaderContainer = styled.div`
+    height:56px;
+    min-width: 768px;
+    max-width: 1440px;
+    margin: 0 auto;
+    position:relative;
+`;
+
+
 export const Logo = styled.div`
  position:absolute;
  top:0;
@@ -34,10 +44,27 @@ export const NavItem = styled.div`
  color:#333333;
  &.left {
     float:left;
+    .home-nav-icon
+    {
+      font-size:20px;
+      margin-right:2px;
+    }
+    .home-nav-download
+    {
+      font-size:20px;
+      margin-right:2px;
+    }
  }
  &.right{
     float:right;
-     color:#969696;
+    color:#969696;
+    .home-read-type{
+     font-size:20px;
+    }
+    .home-nav-diam{
+     height:25px;
+     padding-top:15px;
+    }
  }
  &.active{
     color:#ea6f5a;
@@ -46,7 +73,7 @@ export const NavItem = styled.div`
 export const SearchWrapper = styled.div`
 position:relative;
 float:left;
-z-index:1;
+z-index:99999;
 .zoom{
 position:absolute;
 right:4px;
@@ -115,7 +142,7 @@ overflow:hidden;
 export const NavSearch = styled.input.attrs({
     placeholder: '搜索'
 })`
-width:160px;
+width:240px;
 height:38px;
 padding:0 30px 0 20px;
 margin-left:20px;
@@ -131,20 +158,20 @@ color:#666;
 color:#999
 }
 &.focused{
-width:240px;
+width:320px;
 }
 &.slide-enter{
-transition:all .2s ease-out;
+transition:all .3s ease-out;
 }
 &.slide-enter-active{
-width:240px;
+width:320px;
 }
 
 &.slide-exit{
-transition:all .2s ease-out;
+transition:all .3s ease-out;
 }
 &.slide-exit-active{
-width:160px;
+width:240px;
 }
 `;
 
