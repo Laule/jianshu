@@ -24,18 +24,18 @@ class List extends PureComponent {
                                         <div className='meta'>
                                             <span className='jsd-meta'>
                                                 <i className='iconfont icon-diamond'>&#xe6b2;</i>
-                                                2.3
+                                                {item.get('diamond')}
                                             </span>
                                             <span className='nickname'>
-                                                白丁2009
+                                                {item.get('nickname')}
                                             </span>
                                             <span className='comments'>
                                                 <i className='iconfont icon-message'>&#xe67c;</i>
-                                                2
+                                                {item.get('comments')}
                                             </span>
                                             <span className='like'>
                                                 <i className='iconfont icon-like'>&#xe602;</i>
-                                                  9
+                                                {item.get('like')}
                                             </span>
                                         </div>
                                     </ListInfo>
