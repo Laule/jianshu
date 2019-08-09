@@ -22,6 +22,8 @@ export const login = (account, password) => {
             else {
                 alert('登录失败！');
             }
+        }).catch(() => {
+            alert('登录请求失败！请刷新重试~');
         })
     }
 }

@@ -11,7 +11,14 @@ import {
     ArticleContent,
     SupportAuthor,
     ArticleFooterInfo,
-    AuthorDescription
+    AuthorDescription,
+    ArticleLikeShare,
+    ArticleComment,
+    CommentContainer,
+    NewComment,
+    CommentList,
+    CommentTitle,
+    CommentItem
 } from './style';
 import * as actionCreators from './store/actionCreators';
 
@@ -112,22 +119,117 @@ class Details extends PureComponent {
                                     关注
                                 </span>
                             <span className='nickname'>
-
+西瓜籽毁
                             </span>
                             <img className='badge-icon' src='https://upload.jianshu.io/user_badge/5203a3bf-1c0f-41db-a6f0-31ddb4a929cb' alt='' />
-                            <i className='iconfont'>
+                            <i className='iconfont icon-man'>
                                 &#xe661;
                             </i>
                             <p>写了 20044 字，被 98 人关注，获得了 351 个喜欢</p>
                         </div>
                         <div className='signature'>
-                            自己的公众号:watedin，希望通过记录的生活，使自己不在颓废下去。
+                            我的微信公众号：程序诗人，热爱互联网，与你分享互联网的一切。
                         </div>
                     </AuthorDescription>
+                    <ArticleLikeShare>
+                        <div className='like'>
+                            <div className='like-btn-group'>
+                                <div className='btn-like'>
+                                    <span>
+                                        <i className='iconfont icon-like'>
+                                            &#xe637;
+                                        </i>
+                                        喜欢
+                                    </span>
+                                </div>
+                                <div className='like-number'>
+                                    <span>
+                                        92
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='share-group'>
+                            <span className='share-circle'>
+                                <i className='iconfont icon-weixin'>&#xe63c;</i>
+                            </span>
+                            <span className='share-circle'>
+                                 <i className='iconfont icon-weibo'>&#xe63d;</i>
+                            </span>
+
+                            <span className='share-circle'>
+                                 <i className='iconfont icon-xiance'>&#xe674;</i>
+                            </span>
+
+                            <span className='share-circle more-share'>
+                                更多分享
+                            </span>
+                        </div>
+
+
+                    </ArticleLikeShare>
+                    <img className='note-ad' src='/images/web-note-ad-1-c2e1746859dbf03abe49248893c9bea4.png' alt=''/>
+                    <ArticleComment>
+                        <CommentContainer>
+                            <NewComment>
+                                <div className='avatar'>
+                                    <img src='/images/avatar_default-78d4d1f68984cd6d4379508dd94b4210.png' alt='' />
+                                </div>
+                                <div className='sign-container'>
+                                    <span className='btn-sign'>登录</span>
+                                    <span className='sign-text'>后发表评论</span>
+                                </div>
+                            </NewComment>
+                            <CommentList>
+                                <CommentTitle>
+                                    <span className='comment-num'>14条评论</span>
+                                    <span className='author-only'>只看作者</span>
+                                    <div className='pull-right'>
+                                        <a href='/' className='active'>按时间倒序</a>
+                                        <a href='/'>按时间正序</a>
+                                    </div>
+                                </CommentTitle>
+
+                                <CommentItem>
+                                    <div className='author'>
+                                        <img className='avatar' src='//upload.jianshu.io/users/upload_avatars/2022099/7cd06732-1df8-401b-b348-4f1ae39b28a3.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/114/h/114/format/webp' alt='' />
+                                        <div className='info'>
+                                            <a href='/' className='username'>若君如水</a>
+                                            <div className='meta'>
+                                                <span>10楼 · 2019.04.23 23:45</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='comment-text'>
+                                        <p>抱歉从学术上讲您这个理解太浅显了，萨特对于存在主义的思考和尼采对于道德上的谱系学方法论结果概括的过于片面。好吧...毕竟不是真善美。</p>
+                                        <div className='tool-group'>
+                                            <a className='like-button' href='/'>
+                                                <i className='iconfont icon-zan'>&#xe640;</i>
+                                                <span>
+                                                    1人赞
+                                                </span>
+                                            </a>
+                                            <a className='comment-report' href='/'>
+                                                <i className='iconfont icon-hf'>&#xe63e;</i>
+                                                <span>
+                                                    回复
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </CommentItem>
+
+                            </CommentList>
+                        </CommentContainer>
+                    </ArticleComment>
                 </DetailWrapper>
             </Note>
     )
     }
+// <Header>
+// {title}
+// </Header>
+// <Content dangerouslySetInnerHTML={{__html: content}}/>
 
     componentDidMount() {
         this.props.getDetails(this.props.match.params.id);

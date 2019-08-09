@@ -28,6 +28,8 @@ export const getHomeInfo = () => {
         axios.get('/api/home.json').then((res) => {
             const result = res.data.data;
             dispatch(changeHomeData(result));
+        }).catch(()=>{
+            alert('数据获取失败，请刷新重试~');
         })
     }
 };
@@ -36,6 +38,8 @@ export const getWriterInfo = () => {
         axios.get('/api/writer.json').then((res) => {
             const result = res.data.users;
             dispatch(changeWriterList(result));
+        }).catch(()=>{
+            alert('作者信息获取失败，请刷新重试~');
         })
     }
 };
@@ -45,6 +49,8 @@ export const getMoreList = (page) => {
         axios.get('/api/homeList.json?page=' + page).then((res) => {
             const result = res.data.data;
             dispatch(addHomeList(result, page + 1));
+        }).catch(()=>{
+            alert('文章列表获取失败，请刷新重试~');
         });
     }
 };
