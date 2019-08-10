@@ -78,7 +78,7 @@ class Details extends PureComponent {
                                 </ArticleInfo>
                             </ArticleAuthor>
 
-                            <ArticleContent dangerouslySetInnerHTML={{__html: articleDetail['content']}} />
+                            <ArticleContent dangerouslySetInnerHTML={{__html: articleDetail['content']}}/>
 
                         </Article>
                         <SupportAuthor>
@@ -122,7 +122,7 @@ class Details extends PureComponent {
                                 <i className='iconfont icon-man'>
                                     &#xe661;
                                 </i>
-                                <p>写了{articleDetail['totalWord']}  字，被{articleDetail['totalFollow']}  人关注，获得了{articleDetail['totalLikes']}  个喜欢</p>
+                                <p>写了{articleDetail['totalWord']} 字，被{articleDetail['totalFollow']} 人关注，获得了{articleDetail['totalLikes']} 个喜欢</p>
                             </div>
                             <div className='signature'>
                                 {articleDetail['signature']}
@@ -152,12 +152,11 @@ class Details extends PureComponent {
                             </span>
                                 <span className='share-circle'>
                                  <i className='iconfont icon-weibo'>&#xe63d;</i>
-                            </span>
+                                </span>
 
                                 <span className='share-circle'>
                                  <i className='iconfont icon-xiance'>&#xe674;</i>
-                            </span>
-
+                                </span>
                                 <span className='share-circle more-share'>
                                 更多分享
                             </span>
@@ -364,23 +363,33 @@ class Details extends PureComponent {
                         </NoteBottomTitle>
                         <IncludeCollection>
                             <IncludeCollectionItem>
-                                <img src='//upload.jianshu.io/collections/images/1730597/crop1552189748654.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64/format/webp' alt='' />
+                                <img
+                                    src='//upload.jianshu.io/collections/images/1730597/crop1552189748654.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64/format/webp'
+                                    alt=''/>
                                 <div className='name'>摘录大全</div>
                             </IncludeCollectionItem>
                             <IncludeCollectionItem>
-                                <img src='//upload.jianshu.io/collections/images/1753763/crop1556584105479.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64/format/webp' alt='' />
+                                <img
+                                    src='//upload.jianshu.io/collections/images/1753763/crop1556584105479.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64/format/webp'
+                                    alt=''/>
                                 <div className='name'>哲思感悟</div>
                             </IncludeCollectionItem>
                             <IncludeCollectionItem>
-                                <img src='//upload.jianshu.io/collections/images/255988/android.graphics.Bitmap_42c6bd20.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64/format/webp' alt='' />
+                                <img
+                                    src='//upload.jianshu.io/collections/images/255988/android.graphics.Bitmap_42c6bd20.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64/format/webp'
+                                    alt=''/>
                                 <div className='name'>读书</div>
                             </IncludeCollectionItem>
                             <IncludeCollectionItem>
-                                <img src='//upload.jianshu.io/collections/images/567871/1511143818.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64/format/webp' alt='' />
+                                <img
+                                    src='//upload.jianshu.io/collections/images/567871/1511143818.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64/format/webp'
+                                    alt=''/>
                                 <div className='name'>爱之思</div>
                             </IncludeCollectionItem>
                             <IncludeCollectionItem>
-                                <img src='//upload.jianshu.io/collections/images/569166/1511328284.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64/format/webp' alt='' />
+                                <img
+                                    src='//upload.jianshu.io/collections/images/569166/1511328284.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64/format/webp'
+                                    alt=''/>
                                 <div className='name'>读书人</div>
                             </IncludeCollectionItem>
                         </IncludeCollection>
@@ -402,61 +411,73 @@ class Details extends PureComponent {
                         </div>
                     </RecommendNote>
                     <SeoRecommendedNotes>
-                        <SeoRecommendedNoteItem >
+                        <SeoRecommendedNoteItem>
                             <h1 className='title'>
                                 哲学的故事
                             </h1>
                             <p className='description'>
-                                苏格拉底为什么受爱戴 苏格拉底到底为什么如此受学生的爱戴? 或许因为他既是一名哲学家，又是个极富人情味的人：他在战场上冒着极大的危险救了亚西比德的命，他喝酒时极有绅士范儿，毫无顾忌却又不失分寸。但毫无疑问，他那谦逊外表下无穷的智慧才是学生最为崇拜的：他从不说自己拥有智慧，而...
+                                苏格拉底为什么受爱戴 苏格拉底到底为什么如此受学生的爱戴?
+                                或许因为他既是一名哲学家，又是个极富人情味的人：他在战场上冒着极大的危险救了亚西比德的命，他喝酒时极有绅士范儿，毫无顾忌却又不失分寸。但毫无疑问，他那谦逊外表下无穷的智慧才是学生最为崇拜的：他从不说自己拥有智慧，而...
                             </p>
                             <div className='author'>
                                 <div className='avatar'>
-                                    <img src='//upload.jianshu.io/users/upload_avatars/6351690/b3aeec7b-7794-4fde-b51d-1cdf21d1a765.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/48/h/48' alt='' />
+                                    <img
+                                        src='//upload.jianshu.io/users/upload_avatars/6351690/b3aeec7b-7794-4fde-b51d-1cdf21d1a765.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/48/h/48'
+                                        alt=''/>
                                 </div>
                                 <span className='nickname'>枫情物语</span>
                             </div>
                         </SeoRecommendedNoteItem>
                         <SeoRecommendedNoteItem className='have-img'>
-                            <img className='cover' src='/images/6351690-28e2e3e4a5f33998.jpg' alt='' />
+                            <img className='cover' src='/images/6351690-28e2e3e4a5f33998.jpg' alt=''/>
                             <h1 className='title'>
                                 哲学的故事
                             </h1>
                             <p className='description'>
-                                苏格拉底为什么受爱戴 苏格拉底到底为什么如此受学生的爱戴? 或许因为他既是一名哲学家，又是个极富人情味的人：他在战场上冒着极大的危险救了亚西比德的命，他喝酒时极有绅士范儿，毫无顾忌却又不失分寸。但毫无疑问，他那谦逊外表下无穷的智慧才是学生最为崇拜的：他从不说自己拥有智慧，而...
+                                苏格拉底为什么受爱戴 苏格拉底到底为什么如此受学生的爱戴?
+                                或许因为他既是一名哲学家，又是个极富人情味的人：他在战场上冒着极大的危险救了亚西比德的命，他喝酒时极有绅士范儿，毫无顾忌却又不失分寸。但毫无疑问，他那谦逊外表下无穷的智慧才是学生最为崇拜的：他从不说自己拥有智慧，而...
                             </p>
                             <div className='author'>
                                 <div className='avatar'>
-                                    <img src='//upload.jianshu.io/users/upload_avatars/6351690/b3aeec7b-7794-4fde-b51d-1cdf21d1a765.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/48/h/48' alt='' />
+                                    <img
+                                        src='//upload.jianshu.io/users/upload_avatars/6351690/b3aeec7b-7794-4fde-b51d-1cdf21d1a765.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/48/h/48'
+                                        alt=''/>
                                 </div>
                                 <span className='nickname'>枫情物语</span>
                             </div>
                         </SeoRecommendedNoteItem>
                         <SeoRecommendedNoteItem className='have-img'>
-                            <img className='cover' src='/images/6351690-28e2e3e4a5f33998.jpg' alt='' />
+                            <img className='cover' src='/images/6351690-28e2e3e4a5f33998.jpg' alt=''/>
                             <h1 className='title'>
                                 哲学的故事
                             </h1>
                             <p className='description'>
-                                苏格拉底为什么受爱戴 苏格拉底到底为什么如此受学生的爱戴? 或许因为他既是一名哲学家，又是个极富人情味的人：他在战场上冒着极大的危险救了亚西比德的命，他喝酒时极有绅士范儿，毫无顾忌却又不失分寸。但毫无疑问，他那谦逊外表下无穷的智慧才是学生最为崇拜的：他从不说自己拥有智慧，而...
+                                苏格拉底为什么受爱戴 苏格拉底到底为什么如此受学生的爱戴?
+                                或许因为他既是一名哲学家，又是个极富人情味的人：他在战场上冒着极大的危险救了亚西比德的命，他喝酒时极有绅士范儿，毫无顾忌却又不失分寸。但毫无疑问，他那谦逊外表下无穷的智慧才是学生最为崇拜的：他从不说自己拥有智慧，而...
                             </p>
                             <div className='author'>
                                 <div className='avatar'>
-                                    <img src='//upload.jianshu.io/users/upload_avatars/6351690/b3aeec7b-7794-4fde-b51d-1cdf21d1a765.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/48/h/48' alt='' />
+                                    <img
+                                        src='//upload.jianshu.io/users/upload_avatars/6351690/b3aeec7b-7794-4fde-b51d-1cdf21d1a765.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/48/h/48'
+                                        alt=''/>
                                 </div>
                                 <span className='nickname'>枫情物语</span>
                             </div>
                         </SeoRecommendedNoteItem>
                         <SeoRecommendedNoteItem className='have-img'>
-                            <img className='cover' src='/images/6351690-28e2e3e4a5f33998.jpg' alt='' />
+                            <img className='cover' src='/images/6351690-28e2e3e4a5f33998.jpg' alt=''/>
                             <h1 className='title'>
                                 哲学的故事
                             </h1>
                             <p className='description'>
-                                苏格拉底为什么受爱戴 苏格拉底到底为什么如此受学生的爱戴? 或许因为他既是一名哲学家，又是个极富人情味的人：他在战场上冒着极大的危险救了亚西比德的命，他喝酒时极有绅士范儿，毫无顾忌却又不失分寸。但毫无疑问，他那谦逊外表下无穷的智慧才是学生最为崇拜的：他从不说自己拥有智慧，而...
+                                苏格拉底为什么受爱戴 苏格拉底到底为什么如此受学生的爱戴?
+                                或许因为他既是一名哲学家，又是个极富人情味的人：他在战场上冒着极大的危险救了亚西比德的命，他喝酒时极有绅士范儿，毫无顾忌却又不失分寸。但毫无疑问，他那谦逊外表下无穷的智慧才是学生最为崇拜的：他从不说自己拥有智慧，而...
                             </p>
                             <div className='author'>
                                 <div className='avatar'>
-                                    <img src='//upload.jianshu.io/users/upload_avatars/6351690/b3aeec7b-7794-4fde-b51d-1cdf21d1a765.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/48/h/48' alt='' />
+                                    <img
+                                        src='//upload.jianshu.io/users/upload_avatars/6351690/b3aeec7b-7794-4fde-b51d-1cdf21d1a765.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/48/h/48'
+                                        alt=''/>
                                 </div>
                                 <span className='nickname'>枫情物语</span>
                             </div>
@@ -471,20 +492,25 @@ class Details extends PureComponent {
         this.props.getDetails(this.props.match.params.id);
         this.bindEvents();
     }
-
     // 组件销毁，去除全局事件绑定（这样这个组件的事件就不会影响其他组件的事件）
     componentWillUnmount() {
         window.removeEventListener('scroll', this.props.changeScrollTopShow);
     }
+    componentWillReceiveProps(){
+     console.log(this.props.commentsList);
+      window.addEventListener('scroll', this.props.getComments.bind(this,this.props.match.params.id,this.props.commentsList));
+    }
 
     bindEvents() {
         window.addEventListener('scroll', this.props.changeScrollTopShow);
+
     }
 }
 
 const mapStateToProps = (state) => ({
     articleDetail: state.getIn(['details', 'articleDetail']),
-    showScroll: state.getIn(['details', 'showScroll'])
+    showScroll: state.getIn(['details', 'showScroll']),
+    commentsList: state.getIn(['details', 'commentsList'])
 
 });
 const mapDispatchToProps = (dispatch) => ({
@@ -500,6 +526,15 @@ const mapDispatchToProps = (dispatch) => ({
         }
         else {
             dispatch(actionCreators.toggleTopShow(false));
+        }
+    },
+    getComments(articleId,commentsList) {
+        console.log(JSON.stringify(commentsList));
+        let author_position = document.getElementById('author_desc').offsetTop;
+        let view_position = document.documentElement.scrollTop;
+        if (view_position > author_position && JSON.stringify(commentsList) === "{}") {
+            dispatch(actionCreators.getComment(articleId));
+            console.log('请求评论');
         }
     }
 })

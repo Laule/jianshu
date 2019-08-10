@@ -165,7 +165,9 @@ export const ArticleFooterInfo = styled.div`
     }
 `;
 
-export const AuthorDescription = styled.div`
+export const AuthorDescription = styled.div.attrs({
+    id:'author_desc'
+})`
     padding: 20px;
     background-color: hsla(0,0%,71%,.1);
     border: 1px solid #e1e1e1;
