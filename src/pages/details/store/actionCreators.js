@@ -3,8 +3,12 @@ import axios from 'axios'
 
 const changeDetails = (result) => ({
     type: actionTypes.GET_DETAILS,
-    articleDetail: result
+    topicList: result.topicList,
+    articleDetail: result.article,
+    recommendList: result.recommendList
 });
+
+
 
 export const toggleTopShow = (show) => ({
     type: actionTypes.TOGGLE_SCROLL_SHOW,

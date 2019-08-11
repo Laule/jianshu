@@ -20,7 +20,7 @@ export const DetailWrapper = styled.div`
     }
     
 `;
-export const Article = styled.div`
+export const ArticleContainer = styled.div`
     
 `;
 export const ArticleTitle = styled.h1`
@@ -586,7 +586,7 @@ export const SideTool = styled.div`
     } 
     }
 `;
-export const NoteBottom = styled.div`
+export const NoteBottomBox = styled.div`
     min-height: 213px;
     background-color: #f5f5f5;
     padding-top: 40px;

@@ -3,13 +3,17 @@ import {fromJS} from 'immutable';
 
 const defaultState = fromJS({
     articleDetail: [],
-    commentsList: {},
+    topicList: [],
+    recommendList: [],
+    commentsList: [],
     showScroll: false
 });
 
 const getArticleDetails = (state, action) => {
     return state.merge({
-        articleDetail: action.articleDetail
+        topicList: fromJS(action.topicList),
+        articleDetail: action.articleDetail,
+        recommendList: fromJS(action.recommendList)
     })
 };
 

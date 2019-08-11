@@ -59,7 +59,6 @@ const mapDispatchToProps = (dispatch) => ({
     getMoreList(page) {
         dispatch(actionCreators.getMoreList(page));
     }
-
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(List);
