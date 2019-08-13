@@ -530,6 +530,7 @@ export const FixedAdContainer = styled.div`
     margin-bottom: 15px;
     }
     .close{
+    cursor: pointer;
     display: block;
     width: 20px;
     height: 20px;

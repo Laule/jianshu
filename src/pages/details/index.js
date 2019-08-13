@@ -11,14 +11,14 @@ class Details extends PureComponent {
 
     render() {
         // console.log(this.props.match.params.id);
-        const {showScroll, handleScrollTop} = this.props;
+        const {showScroll, handleScrollTop,handleCloseAd} = this.props;
         return (
             <Fragment>
                 <Note>
                     <FixedAdContainer>
-                        <a className='web-note-ad-fixed' href='/'>
-                            <span className='close'>×</span>
-                        </a>
+                        <div className='web-note-ad-fixed' ref={(close) => {this.closeIcon = close}} >
+                            <span className='close' onClick={() => handleCloseAd(this.closeIcon)}>×</span>
+                        </div>
                     </FixedAdContainer>
                     <DetailWrapper>
                         <Article />
@@ -71,6 +71,10 @@ const mapDispatchToProps = (dispatch) => ({
     },
     handleScrollTop() {
         window.scrollTo(0, 0);
+    },
+    handleCloseAd(ad)
+    {
+        ad.style.display = 'none';
     },
     changeScrollTopShow(e) {
         if (document.documentElement.scrollTop > 200) {
