@@ -3,7 +3,7 @@ import {ListWrapper,ListItem, ListInfo, LoadMore} from '../style';
 import {connect} from 'react-redux';
 import * as actionCreators from '../store/actionCreators';
 import {Link} from 'react-router-dom';
-
+import Loading from '../../../common/loading/home';
 class List extends PureComponent {
     render() {
         const {list, getMoreList, page} = this.props;
@@ -44,6 +44,7 @@ class List extends PureComponent {
                         )
                     })
                 }
+                <Loading />
                 <LoadMore onClick={() => getMoreList(page)}>阅读更多</LoadMore>
             </ListWrapper>
         )
