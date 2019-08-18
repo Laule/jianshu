@@ -251,7 +251,7 @@ export const WriteSwitch = styled.div`
     font-size: 14px;
     color: #969696;
     .spin{
-       padding-right:4px;
+       margin-right: 4px;
        display:block;
        float:left;
        transition:all .3s ease-in;

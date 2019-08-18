@@ -19,13 +19,21 @@ const changeHomeData = (state, action) => {
         articleList: fromJS(action.articleList),
         recommendList: fromJS(action.recommendList)
     });
-}
+};
 const addArticleList = (state, action) => {
     return state.merge({
         articleList: state.get('articleList').concat(action.list),
-        articlePage: action.nextPage
+        articlePage: action.nextPage,
+        loading:false
     });
-}
+};
+
+const changeWriterList=(state,action) =>{
+    return state.merge({
+        writerList: action.data,
+        totalPage: action.totalPage
+    });
+};
 
 export default (state = defaultState, action) => {
     switch (action.type) {
@@ -36,12 +44,11 @@ export default (state = defaultState, action) => {
         case actionTypes.TOGGLE_SCROLL_SHOW:
             return state.set('showScroll', action.show);
         case actionTypes.CHANGE_WRITER_LIST:
-            return state.merge({
-                writerList: action.data,
-                totalPage: action.totalPage
-            });
+            return changeWriterList(state,action);
         case actionTypes.CHANGE_PAGE:
             return state.set('page', action.page);
+        case actionTypes.CHANGE_LOADING_STATUS:
+            return state.set('loading', true);
         default:
             return state;
     }

@@ -1,12 +1,13 @@
 import React, {PureComponent} from 'react';
-import {ListWrapper,ListItem, ListInfo, LoadMore} from '../style';
+import {ListWrapper, ListItem, ListInfo, LoadMore} from '../style';
 import {connect} from 'react-redux';
 import * as actionCreators from '../store/actionCreators';
 import {Link} from 'react-router-dom';
-import Loading from '../../../common/loading/home';
+import Loading from "../../../common/loading/home";
+
 class List extends PureComponent {
     render() {
-        const {list, getMoreList, page} = this.props;
+        const {list, getMoreList, page,loading} = this.props;
         return (
             <ListWrapper>
                 {
@@ -44,22 +45,23 @@ class List extends PureComponent {
                         )
                     })
                 }
-                <Loading />
-                <LoadMore onClick={() => getMoreList(page)}>阅读更多</LoadMore>
+                {loading?<Loading/>:<LoadMore onClick={() => getMoreList(page)}>阅读更多</LoadMore>}
+
             </ListWrapper>
         )
     }
 }
 
+
 const mapStateToProps = (state) => ({
     list: state.getIn(['home', 'articleList']),
     page: state.getIn(['home', 'articlePage']),
-
-})
+    loading: state.getIn(['home', 'loading'])
+});
 const mapDispatchToProps = (dispatch) => ({
     getMoreList(page) {
         dispatch(actionCreators.getMoreList(page));
     }
-})
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(List);

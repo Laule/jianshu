@@ -15,6 +15,7 @@ import {
 } from './style';
 import * as actionCreators from './store/actionCreators';
 
+
 class Home extends PureComponent {
     render() {
         const {handleScrollTop, showScroll} = this.props;
@@ -25,7 +26,7 @@ class Home extends PureComponent {
                          src='https://upload.jianshu.io/admin_banners/web_images/4686/b0c8770725de15714a4cb894f0ecdbc16f216008.png?imageMogr2/auto-orient/strip|imageView2/1/w/1250/h/540'
                          alt='横幅'/>
                     <Topic/>
-                    <List/>
+                    <List />
                 </HomeLeft>
                 <HomeRight>
                     <Recommend/>
@@ -59,7 +60,7 @@ class Home extends PureComponent {
 
 const mapStateToProps = (state) => ({
     showScroll: state.getIn(['home', 'showScroll'])
-})
+});
 const mapDispatchToProps = (dispatch) => ({
     changeHomeData() {
         dispatch(actionCreators.getHomeInfo());

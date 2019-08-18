@@ -22,7 +22,6 @@ const changeWriterList = (list) => ({
     totalPage: Math.ceil(list.length / 10)
 });
 
-
 export const getHomeInfo = () => {
     return (dispatch) => {
         axios.get('/api/home.json').then((res) => {
@@ -46,12 +45,13 @@ export const getWriterInfo = () => {
 
 export const getMoreList = (page) => {
     return (dispatch) => {
-        axios.get('/api/homeList.json?page=' + page).then((res) => {
-            const result = res.data.data;
-            dispatch(addHomeList(result, page + 1));
-        }).catch(()=>{
-            alert('文章列表获取失败，请刷新重试~');
-        });
+        dispatch(changeLoadingStatus());
+        setTimeout(function () {
+            axios.get('/api/homeList.json?page=' + page).then((res) => {
+                const result = res.data.data;
+                dispatch(addHomeList(result, page + 1));
+            });
+        },1500);
     }
 };
 
@@ -64,3 +64,8 @@ export const changePage = (page) => ({
     type: actionTypes.CHANGE_PAGE,
     page
 });
+
+ const changeLoadingStatus = () => ({
+    type: actionTypes.CHANGE_LOADING_STATUS
+});
+

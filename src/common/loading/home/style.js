@@ -36,6 +36,10 @@ export const LoadingPlaceholderMeta = styled.div`
     vertical-align: middle;
     background-color: #eaeaea;
     }
+    i{
+    margin: 0 5px;
+    vertical-align: middle;
+    }
     margin: 0;
     color: #eaeaea;
     font-size: 12px;
