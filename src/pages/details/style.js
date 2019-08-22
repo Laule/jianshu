@@ -763,3 +763,9 @@ export const SeoRecommendedNoteItem =styled.div`
     vertical-align: middle;
     }
 `;
+
+
+export const Loading = styled.div`
+     padding-top:120px;
+     text-align:center;
+`;

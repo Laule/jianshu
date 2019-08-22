@@ -70,7 +70,11 @@ const mapDispatchToProps = (dispatch) => ({
         dispatch(actionCreators.getDetails(id));
     },
     handleScrollTop() {
-        window.scrollTo(0, 0);
+        window.scrollTo({
+            left: 0,
+            top: 0,
+            behavior: 'smooth'
+        });
     },
     handleCloseAd(ad)
     {
